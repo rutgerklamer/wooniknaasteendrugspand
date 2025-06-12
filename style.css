@@ -1,0 +1,428 @@
+:root {
+  --red: #ED1C24;
+  --dark: #222;
+  --light-gray: #f2f2f2;
+  --gray: #666;
+  --white: #fff;
+  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: var(--font-sans);
+  background: var(--light-gray);
+  color: var(--dark);
+  line-height: 1.6;
+   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--dark);
+  text-decoration-style: solid;
+}
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ----------------------------
+   HEADER TOP RESPONSIVE
+   ---------------------------- */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  flex-wrap: wrap; /* zorgt dat items naar een nieuwe regel gaan */
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--red);
+  flex: 0 0 auto; /* behoudt eigen breedte bij wrap */
+}
+.logo span {
+  color: var(--dark);
+}
+
+.search-form2 {
+  display: flex;
+  align-items: center;
+  flex: 1 1 300px; /* groeit/krimpt naar beschikbare ruimte */
+  margin-top: 12px; /* aangepast via media query */
+  margin-left: 12px;
+}
+.search-form2 input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  width: 100%; /* vult altijd de container */
+}
+.search-form2 button {
+  padding: 0.5rem 1rem;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  flex: 0 0 auto; /* voorkom krimpen */
+}
+
+/* fallback-zoekveld in sidebar */
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.search-form input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  width: 100%;
+}
+.search-form button {
+  padding: 0.5rem 1rem;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+/* ----------------------------
+   MAIN NAVIGATION (desktop zonder scroll)
+   ---------------------------- */
+.main-nav {
+  background: var(--dark);
+  /* overflow: hidden;  nog steeds verberg eventuele overflow */
+}
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0.5rem 2rem;
+  /* scroll en animatie alléén in mobile */
+}
+.main-nav li {
+  flex: 0 0 auto; /* voorkom krimpen/groeien */
+}
+.main-nav li + li {
+  margin-left: 1.5rem;
+}
+.main-nav a {
+  color: var(--white);
+  font-weight: 600;
+}
+.main-nav a:hover {
+  color: var(--light-gray);
+}
+
+/* ----------------------------
+   BREAKING NEWS, CONTENT, SIDEBAR, ETC.
+   ---------------------------- */
+.breaking-news {
+  background: var(--red);
+  color: var(--white);
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+}
+.breaking-news span {
+  text-transform: uppercase;
+  margin-right: 1rem;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.lead-article {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.lead-image img {
+  width: 100%;
+  display: block;
+}
+.lead-text {
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+}
+.lead-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.lead-text .meta {
+  color: var(--gray);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+.lead {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: var(--dark);
+}
+
+.article-body {
+  padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+.article-body h2 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+.article-body p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+.quote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--red);
+  background: #fff5f5;
+  font-style: italic;
+}
+
+.map-container {
+  margin-top: 1.5rem;
+}
+.map-container iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 4px;
+}
+
+.sidebar .widget {
+  background: var(--white);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+.sidebar h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--dark);
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li + li {
+  margin-top: 0.75rem;
+}
+.sidebar .social li + li {
+  margin-top: 0.5rem;
+}
+.icon-facebook::before { content: "📘 "; }
+.icon-twitter::before  { content: "🐦 "; }
+.icon-instagram::before{ content: "📸 "; }
+
+.site-footer {
+  background: var(--dark);
+  color: var(--light-gray);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: auto;
+  bottom: 0;
+  
+}
+.site-footer a {
+  color: var(--light-gray);
+}
+.site-footer a:hover {
+  color: var(--white);
+}
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+.footer-copy {
+  font-size: 0.875rem;
+}
+
+/* ----------------------------
+   MEDIA QUERIES
+   ---------------------------- */
+@media (max-width: 992px) {
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar {
+    order: 1; /* onderaan tonen */
+  }
+  .lead-article {
+    order: 0;
+  }
+}
+
+/* Extra responsive voor header-top */
+@media (max-width: 600px) {
+  /* Header-top blijft (indien nodig) leeg of bevat extra mobile tweaks */
+  .header-top {
+  }
+
+  /* Zoekveld in header-fullwidth op mobiel */
+  .search-form2 {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* NAV SCROLL OP TELEFOON */
+  .main-nav {
+    overflow: hidden; /* voorkomt verticale scrollbar */
+  }
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;               /* geen wrap van items */
+    animation: loop-nav 20s linear infinite; /* vloeiende, oneindige scroll */
+    -ms-overflow-style: none;          /* IE/Edge scrollbar verbergen */
+    scrollbar-width: none;             /* Firefox scrollbar verbergen */
+  }
+  .main-nav ul::-webkit-scrollbar {
+    display: none; /* Chrome/Safari scrollbar verbergen */
+  }
+
+  /* Keyframes voor oneindige scroll */
+  
+
+  /* Sidebar zoekvak styling op mobiel */
+  .search-div {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 4px 4px 0 0;
+  }
+
+  /* “Deel” knop */
+  #shareBtn {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.1s ease;
+    margin-top: 12px;
+  }
+  #shareBtn:hover {
+    filter: brightness(90%);
+    transform: translateY(-2px);
+  }
+
+  /* Handmatige copy-popup */
+  .copy-msg {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--dark);
+    color: var(--white);
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  .copy-msg.visible {
+    opacity: 1;
+  }
+}
+
+
+
+.search-div {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 4px 4px 0px 0px;
+}
+
+/* Gestyleerde “Deel” knop */
+#shareBtn {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.1s ease;
+}
+#shareBtn:hover {
+  filter: brightness(90%);
+  transform: translateY(-2px);
+}
+
+/* Handmatige copy-popup */
+.copy-msg {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--dark);
+  color: var(--white);
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+.copy-msg.visible {
+  opacity: 1;
+}
+
+#map { width:100%; height:400px; margin-top:1em; }
+    .explanation { margin:1em 0; font-style:italic; }
+    #placeBtn {
+      display:block;
+      margin:0.5em 0;
+      padding:0.5em 1em;
+      font-size:1em;
+      cursor:pointer;
+    }
+    #placeBtn:disabled {
+      opacity:0.6;
+      cursor:not-allowed;
+    }
+    #status-text { margin-top:0.5em; font-weight:bold; }
+
+p.explanation {
+  margin: 0;
+}

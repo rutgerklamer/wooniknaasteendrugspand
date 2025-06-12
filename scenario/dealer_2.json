@@ -1,0 +1,54 @@
+{
+  "type": "incident",
+  "headline_variants": [
+    "Bloedige afrekening bij %BUILDING% aan %ADDRESS%: %DEATHS% doden en %INJURIES% gewonden"
+  ],
+  "lead_variants": [
+    "Een drugsdeal liep volledig uit de hand in een %BUILDING% aan %ADDRESS%, met een kogelregen die het leven kostte van %DEATHS% personen."
+  ],
+  "body_variants": [
+    [
+      "Rond %TIME% klonken tientallen schoten in en rond het %BUILDING% op %ADDRESS%. Omstanders zochten dekking achter geparkeerde auto's.",
+      "Binnen trof de politie grote hoeveelheden grondstoffen en apparatuur voor synthetische drugs aan. ",
+      "Volgens een getuige; “%QUOTE1%” en een ander voegde toe; “%QUOTE2%”.",
+      "'Ik kwam hier wel eens om te kopen. Het liefst haal ik mijn spul ook niet bij een illegale dealer. Maar er is helaas nog geen alternatief. Ik hoop dat de politie en overheid hier snel iets mee doet.'",
+      "De verhuurder van het pand zegt dat hij niets wist van de illegale activiteiten, hij moet zijn woning nu voor 6 maanden sluiten. 'Ik voel me verdrietig, ik ga het pand over 6 maanden verkopen'.",
+      "De vraag naar drugs wordt steeds groter, en dit soort praktijken zien we dan ook steeds vaker. De maatschappij normaliseert drugsgebruik steeds meer, dus misschien moeten we daarin meebewegen en eens kijken naar opties voor veilige en gereguleerde drugsproductie, aldus de politie.",
+      "Omwonenden vertellen hun observaties; “%SIGNAL1%” en een ander voegde toe; “%SIGNAL2%”. Een vrouw, zelf gewond verteld; “%SIGNAL3%“.",
+      "Naast de %DEATHS% doden en %INJURIES% gewonden is er ook een kat overleden door de schietpartij. ",
+      "De afdeling Openbare Orde en Veiligheid van de gemeente roept op; 'meld verdachte situaties direct bij de politie, ook als je twijfelt kun je iets melden, zo voorkom je deze situaties'. De politie vult aan; 'meld verdachte situaties direct via 0900-8844 of doe dit volledige anoniem via Meld Misdaad Anoniem; 0800-7000'."
+    ]
+  ],
+  "interview_signals": [
+    {
+      "speaker": "Buurtbewoner",
+      "quote": "Er stonden vaak vreemde auto’s geparkeerd die binnen een paar minuten weer wegreed."
+    },
+    {
+      "speaker": "Pakketbezorger",
+      "quote": "Ik moest altijd 3 keer kloppen, als ik aanbelde deed er nooit iemand open."
+    },
+    {
+      "speaker": "Buurtbewoner",
+      "quote": "Er was eigenlijk nooit overlast, maar ik zag wel vaak mensen in en uit het pand gaan. Het leken hele normale mensen."
+    },
+    {
+      "speaker": "Buurtbewoner",
+      "quote": "Het was een hele normale jongen die er woonde, natuurlijk deed hij altijd aardig, anders zouden mensen hem niet vertrouwen."
+    }
+  ],
+  "interview_pool": [
+    {
+      "speaker": "Buurtbewoner",
+      "quote": "Ik werd wakker van het geknal en zag mensen in paniek de straat op rennen. Een auto zonder nummerbord scheurde snel weg. Ik vond het altijd al een raar pand, maar was bang om iets te melden. Ik kreeg te horen dat ik het ook anoniem had kunnen melden."
+    },
+    {
+      "speaker": "Omwonende",
+      "quote": "Mijn kinderen spelen vaak buiten, ik ben blij dat ze binnen waren. Ik zou willen dat ik toch eerder iets had gemeld, dan was dit nooit gebeurd."
+    },
+    {
+      "speaker": "Omwonende",
+      "quote": "Het was een chaos, mensen renden overal heen en weer. Ik zag wel eens wat verdachts, maar had nooit verwacht dat zoiets hier kon gebeuren."
+    }
+  ]
+}
